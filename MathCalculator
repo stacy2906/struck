@@ -1,0 +1,23 @@
+public class MathCalculator
+{
+    public static double Calculate(double num1, double num2, MathOperation operation)
+    {
+        switch(operation)
+        {
+            case MathOperation.Addition:
+                return num1 + num2;
+            case MathOperation.Subtraction:
+                return num1 - num2;
+            case MathOperation.Multiplication:
+                return num1 * num2;
+            case MathOperation.Division:
+                if(num2 != 0)
+                    return num1 / num2;
+                else
+                    throw new DivideByZeroException("Division by zero is not allowed.");
+            default:
+                throw new ArgumentOutOfRangeException("Invalid math operation.");
+        }
+    }
+}
+
