@@ -1,0 +1,9 @@
+// Задача 4
+public enum UserRole
+{
+    Administrator,
+    Moderator,
+    User,
+    Guest
+}
+
