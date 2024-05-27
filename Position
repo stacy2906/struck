@@ -1,0 +1,8 @@
+// Задача 5
+public enum Position
+{
+    Manager = 160,
+    Developer = 180,
+    Designer = 150
+}
+
