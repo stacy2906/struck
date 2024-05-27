@@ -1,0 +1,11 @@
+using System;
+
+// Задача 3
+public enum MathOperation
+{
+    Addition,
+    Subtraction,
+    Multiplication,
+    Division
+}
+
