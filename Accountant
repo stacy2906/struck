@@ -1,0 +1,12 @@
+public class Accountant
+{
+    public static bool AskForBonus(Position worker, int hours)
+    {
+        if(hours > (int)worker)
+        {
+            return true;
+        }
+        return false;
+    }
+}
+
