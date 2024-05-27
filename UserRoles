@@ -1,0 +1,15 @@
+public class UserRoles
+{
+    public static void CheckUserRole(string input)
+    {
+        if(Enum.TryParse<UserRole>(input, true, out UserRole role))
+        {
+            Console.WriteLine($"You are registered as {role.ToString().ToLower()}.");
+        }
+        else
+        {
+            Console.WriteLine("Error: Invalid user role entered.");
+        }
+    }
+}
+
