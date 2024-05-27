@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+// Пример использования перечислений
+static void Main(string[] args)
+ {
+    // Пример вывода названий месяцев и дней недели
+    foreach(Month month in Enum.GetValues(typeof(Month)))
+    {
+        Console.WriteLine(month);
+    }
+
+    foreach(DayOfWeek dayOfWeek in Enum.GetValues(typeof(DayOfWeek)))
+    {
+        Console.WriteLine(dayOfWeek);
+    }
+ }
+}
