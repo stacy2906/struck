@@ -5,7 +5,7 @@ class Program
 // Пример использования перечислений
 static void Main(string[] args)
  {
-    // Пример вывода названий месяцев и дней недели
+    // вывод названий месяцев и дней недели
     foreach(Month month in Enum.GetValues(typeof(Month)))
     {
         Console.WriteLine(month);
@@ -15,5 +15,37 @@ static void Main(string[] args)
     {
         Console.WriteLine(dayOfWeek);
     }
+
+        
+        Console.WriteLine("Task 3: Calculate 5 + 3");
+        Console.WriteLine(MathCalculator.Calculate(5, 3, MathOperation.Addition));
+
+        Console.WriteLine("\nTask 4: Enter your user role:");
+        string userRoleInput = Console.ReadLine();
+        UserRoles.CheckUserRole(userRoleInput);
+
+        Console.WriteLine("\nTask 5: Enter position (Manager, Developer, Designer):");
+        string positionInput = Console.ReadLine();
+        Console.WriteLine("Enter total hours worked:");
+        int hoursWorked = Convert.ToInt32(Console.ReadLine());
+
+        if(Enum.TryParse<Position>(positionInput, true, out Position pos))
+        {
+            if(Accountant.AskForBonus(pos, hoursWorked))
+            {
+                Console.WriteLine("Bonus should be given to the employee.");
+            }
+            else
+            {
+                Console.WriteLine("No bonus for the employee.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error: Invalid position entered.");
+        }
+    }
+}
+
  }
 }
